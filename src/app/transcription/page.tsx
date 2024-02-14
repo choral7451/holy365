@@ -33,7 +33,7 @@ function Page() {
           <div className="w-[100%] h-[100%] pt-10 pb-7 px-7 border-solid border-2 border-primary rounded">
             {oldTestament.map((bible,idx) => {
               return <button key={idx} className="bg-primary text-white py-2 px-4 rounded m-2"
-                             onClick={() => router.push("/transcription/genesis")}
+                             onClick={() => router.push("/transcription/genesis/1")}
               >{bible}</button>
             })}
           </div>
@@ -43,7 +43,7 @@ function Page() {
           <div className="w-[100%] h-[100%] pt-10 pb-7 px-7 border-solid border-2 border-primary rounded">
             {newTestament.map((bible,idx) => {
               return <button key={idx} className="bg-primary text-white py-2 px-4 rounded m-2"
-                             onClick={() => router.push("/transcription/genesis")}
+                             onClick={() => router.push("/transcription/genesis/1")}
               >{bible}</button>
             })}
           </div>
