@@ -11,7 +11,7 @@ export default function Home() {
             <BookOpenIcon className="h-[100px] w-[100px]" />
             <div className="">성경 필사</div>
           </Link>
-          <Link href="" className="flex flex-col items-center justify-center font-bold">
+          <Link href="/recruit" className="flex flex-col items-center justify-center font-bold">
             <UsersIcon className="h-[100px] w-[100px]" />
             <div className="">구인</div>
           </Link>

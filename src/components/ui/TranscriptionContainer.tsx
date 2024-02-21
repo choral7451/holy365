@@ -28,8 +28,8 @@ function Transcription() {
   )
 
   useEffect(() => {
-    setOldTestament(data.oldTestament)
-    setNewTestament(data.newTestament)
+    setOldTestament(data?.oldTestament)
+    setNewTestament(data?.newTestament)
   },[])
 
 
@@ -46,21 +46,21 @@ function Transcription() {
         <div className="flex flex-col justify-center items-start w-[45%] h-[100%]rounded">
           <div className="-mb-4 ml-5 text-2xl font-bold z-0 bg-white px-4">구약</div>
           <div className="w-[100%] h-[100%] pt-10 pb-7 px-7 border-solid border-2 border-primary rounded">
-            {oldTestament.map((bible,idx) => {
-              return <button key={idx} className="bg-primary text-white py-2 px-4 rounded m-2"
-                             onClick={() => router.push(`/transcription/${bible.enTitle}/1`)}
-              >{bible.koTitle}</button>
-            })}
+            {/*{oldTestament?.map((bible,idx) => {*/}
+            {/*  return <button key={idx} className="bg-primary text-white py-2 px-4 rounded m-2"*/}
+            {/*                 onClick={() => router.push(`/transcription/${bible.enTitle}/1`)}*/}
+            {/*  >{bible.koTitle}</button>*/}
+            {/*})}*/}
           </div>
         </div>
         <div className="flex flex-col justify-center items-start w-[45%] rounded">
           <div className="-mb-4 ml-5 text-2xl font-bold z-0 bg-white px-4">신약</div>
           <div className="w-[100%] h-[100%] pt-10 pb-7 px-7 border-solid border-2 border-primary rounded">
-            {newTestament.map((bible,idx) => {
-              return <button key={idx} className="bg-primary text-white py-2 px-4 rounded m-2"
-                             onClick={() => router.push(`/transcription/${bible.enTitle}/1`)}
-              >{bible.koTitle}</button>
-            })}
+            {/*{newTestament?.map((bible,idx) => {*/}
+            {/*  return <button key={idx} className="bg-primary text-white py-2 px-4 rounded m-2"*/}
+            {/*                 onClick={() => router.push(`/transcription/${bible.enTitle}/1`)}*/}
+            {/*  >{bible.koTitle}</button>*/}
+            {/*})}*/}
           </div>
         </div>
       </div>
