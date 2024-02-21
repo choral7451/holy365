@@ -14,7 +14,11 @@ function Transcription() {
   const [oldTestament, setOldTestament] = useState([])
   const [newTestament, setNewTestament] = useState([])
   const searchBible = () => {
+    const filteredOldTestament = data.oldTestament.filter(testament => testament.koTitle.includes(searchKeyword))
+    const filteredNewTestament = data.newTestament.filter(testament => testament.koTitle.includes(searchKeyword))
 
+    setOldTestament(filteredOldTestament)
+    setNewTestament(filteredNewTestament)
   };
 
   const {data} = useQuery({
