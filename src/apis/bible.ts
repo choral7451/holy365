@@ -1,5 +1,9 @@
-import {apiRequest} from "@/apis/index";
 import axios from "axios";
+
+export const getBibleTitleList = async () => {
+  const response = await axios.get(`http://localhost:8080/bible/titles`)
+  return response.data
+}
 
 export const getVerseList = async (title: String, chapter: Number ) => {
   const response = await axios.get(`http://localhost:8080/bible/${title}/${chapter}/verses`)
