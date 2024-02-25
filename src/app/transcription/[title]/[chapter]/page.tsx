@@ -1,6 +1,6 @@
 import TranscriptionDetailContainer from "@/components/ui/TranscriptionDetailContainer";
 import GetQueryClient from "@/app/GetQueryClient";
-import {countChapters, getVerseList} from "@/apis/bible";
+import { countChapters, getChapterList, getVerseList } from "@/apis/bible"
 import {dehydrate} from "@tanstack/query-core";
 import {HydrationBoundary} from "@tanstack/react-query";
 
@@ -14,9 +14,9 @@ async function Page(props: Props) {
   const {title, chapter} = props.params;
 
   await queryClient.prefetchQuery({
-    queryKey: ["countChapters", props.params.title],
+    queryKey: ["getChapters", props.params.title],
     queryFn: () => {
-      return countChapters(title)
+      return getChapterList(title)
     },
   })
 

@@ -14,12 +14,6 @@ async function Page() {
     },
   })
 
-  await queryClient.prefetchQuery({
-    queryKey: ["getBibleTitleList"],
-    queryFn: () => {
-      return getBibleTitleList()
-    },
-  })
   const dehydratedState = dehydrate(queryClient)
 
   return (
